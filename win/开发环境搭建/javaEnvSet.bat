@@ -5,8 +5,8 @@ color 02
 ::设置java的安装路径，可方便切换不同的版本
 echo 请使用管理员身份执行
 set input=
-set /p "input=请输入java的jdk路径（或回车默认路径为C:\devenv\java\jdk779）:"
-if defined input (echo jdk已设置) else (set input=C:\devenv\java\jdk779)
+set /p "input=请输入java的jdk路径（或回车默认路径为%systemdrive%\devenv\java\jdk779）:"
+if defined input (echo jdk已设置) else (set input=%systemdrive%\devenv\java\jdk779)
 echo jdk路径为%input%
 set javaPath=%input%
 

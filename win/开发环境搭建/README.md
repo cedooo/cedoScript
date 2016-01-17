@@ -8,5 +8,5 @@
 - javaEnvSet.bat 设置JAVA_HOME
 - mavenEnvSet.bat 添加Maven到%PATH%
 
-- installFile.cmd 调用installDevEnvFile.ps1下载文件
-- installDevEnvFile.ps1 下载指定文件
+- install.cmd 运行起点
+- installFile.ps1 下载指定文件:7-Zip

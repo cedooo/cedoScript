@@ -5,8 +5,8 @@ color 02
 ::设置java的安装路径，可方便切换不同的版本
 echo 请使用管理员身份执行
 set input=
-set /p "input=请输入maven路径（或回车默认路径为C:\devenv\apache-maven-3.3.9）:"
-if defined input (echo maven路径已设置) else (set input=C:\devenv\apache-maven-3.3.9)
+set /p "input=请输入maven路径（或回车默认路径为%systemdrive%\devenv\apache-maven-3.3.9）:"
+if defined input (echo maven路径已设置) else (set input=%systemdrive%\devenv\apache-maven-3.3.9)
 echo maven路径为%input%
 set mvnPath=%input%
 
