@@ -3,9 +3,10 @@
 :: TODO:设置java环境变量
 color 02
 ::设置java的安装路径，可方便切换不同的版本
+echo 请使用管理员身份执行
 set input=
-set /p "input=请输入java的jdk路径（或回车默认路径为C:\Program Files\Java\jdk1.7.0_71）:"
-if defined input (echo jdk已设置) else (set input=C:\Program Files\Java\jdk1.7.0_71)
+set /p "input=请输入java的jdk路径（或回车默认路径为C:\devenv\java\jdk779）:"
+if defined input (echo jdk已设置) else (set input=C:\devenv\java\jdk779)
 echo jdk路径为%input%
 set javaPath=%input%
 
@@ -22,9 +23,9 @@ wmic ENVIRONMENT create name="JAVA_HOME",username="<system>",VariableValue="%jav
 wmic ENVIRONMENT create name="CLASS_PATH",username="<system>",VariableValue=".;%%JAVA_HOME%%\lib\tools.jar;%%JAVA_HOME%%\lib\dt.jar;"
 
 ::在环境变量path中，剔除掉变量java_home中的字符，回显剩下的字符串
-call set xx=%Path%;%JAVA_HOME%\jre\bin;%JAVA_HOME%\bin
+call set xx=%Path%;%javaPath%\jre\bin;%javaPath%\bin
 
-::echo %xx%
+echo %xx%
 
 ::将返回显的字符重新赋值到path中
 wmic ENVIRONMENT where "name='Path' and username='<system>'" set VariableValue="%xx%"
