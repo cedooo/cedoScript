@@ -6,7 +6,7 @@ color 02
 echo 请使用管理员身份执行
 set input=
 set /p "input=请输入SSH key路径（或回车默认路径为D:\ssh）:"
-if defined input (echo maven路径已设置) else (set input=D:\ssh)
+if defined input (echo SSH key路径已设置) else (set input=D:\ssh)
 
 copy %input%\id_rsa %systemdrive%%homepath%\.ssh\id_rsa
 copy %input%\id_rsa.pub %systemdrive%%homepath%\.ssh\id_rsa.pub
