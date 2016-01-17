@@ -1,27 +1,21 @@
-::å…è®¸windowsæ‰§è¡Œpowershellè„šæœ¬æ–‡ä»¶
+::ÔÊĞíwindowsÖ´ĞĞpowershell½Å±¾ÎÄ¼ş
 powershell set-executionpolicy -executionpolicy unrestricted
-::ä¸‹è½½7-Zip
+::ÏÂÔØ7-Zip
 powershell .\installFile.ps1
-::å®‰è£…7-zip
+::°²×°7-zip
 %systemdrive%\7zip.msi
-::åˆ é™¤7-zipå®‰è£…åŒ…
+::É¾³ı7-zip°²×°°ü
 del %systemdrive%\7zip.msi
 
 set zipdrive=
-set /p "zipdrive=è¯·è¾“å…¥ZIPæ‰€åœ¨è·¯å¾„ï¼ˆæˆ–å›è½¦é»˜è®¤è·¯å¾„ä¸ºD:\devenv.zip:"
-if defined input (echo ZIPæ‰€åœ¨è·¯å¾„å·²è®¾ç½®) else (set zipdrive=D:\devenv.zip)
+set /p "zipdrive=ÇëÊäÈëZIPËùÔÚÂ·¾¶£¨»ò»Ø³µÄ¬ÈÏÂ·¾¶ÎªD:\devenv.zip:"
+if defined input (echo ZIPËùÔÚÂ·¾¶ÒÑÉèÖÃ) else (set zipdrive=D:\devenv.zip)
 
-::è§£å‹devenvæ–‡ä»¶åˆ°Cç›˜æ ¹ç›®å½•
+::½âÑ¹devenvÎÄ¼şµ½CÅÌ¸ùÄ¿Â¼
 "%programfiles%"\7-zip\7z e -y -spf %zipdrive% -o%systemdrive%\
 
 
-::æ‹·è´ssh key
-copySSHkey.bat
-echo æ‹·è´ssh keyå®Œæˆ
-::è®¾ç½®Javaç¯å¢ƒ
-javaEnvSet.bat
-echo javaç¯å¢ƒè®¾ç½®å®Œæˆï¼Œjava_home=%JAVA_HOME%
-::è®¾ç½®mavenç¯å¢ƒ
-mavenEnvSet.bat
-echo Mavenç¯å¢ƒè®¾ç½®å®Œæˆ
+::¿½±´ssh key && ÉèÖÃJava»·¾³ && ÉèÖÃmaven»·¾³
+copySSHkey.bat && javaEnvSet.bat && mavenEnvSet.bat
+echo ¿½±´ssh keyÍê³É, java»·¾³ÉèÖÃÍê³É, Maven»·¾³ÉèÖÃÍê³É
 pause
