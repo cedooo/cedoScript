@@ -1,6 +1,5 @@
 #本地开发环境设置
 所有环境的资源路径默认路径为 C:\devenv 
-执行脚本前，确保将devenv.zip解压到C:\
 
 
 - copySSHkey.bat 拷贝sshkey
