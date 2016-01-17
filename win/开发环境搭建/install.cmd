@@ -12,7 +12,7 @@ set /p "zipdrive=请输入ZIP所在路径（或回车默认路径为%systemdrive
 if defined input (echo ZIP所在路径已设置) else (set zipdrive=%systemdrive%\devenv.zip)
 
 ::解压devenv文件到C盘根目录
-"%programfiles%"\7-zip\7z e -y -spf %systemdrive%\devenv.zip -o%systemdrive%\
+"%programfiles%"\7-zip\7z e -y -spf %zipdrive% -o%systemdrive%\
 
 
 ::拷贝ssh key
