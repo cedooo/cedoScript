@@ -5,7 +5,7 @@ first, get devenv.zip
 
 - copySSHkey.bat 拷贝sshkey
 
-- javaEnvSet.bat 设置JAVA_HOME
+- javaEnvSet.bat 设置JAVA环境变量等
 - mavenEnvSet.bat 添加Maven到%PATH%
 
 - install.cmd 运行起点
