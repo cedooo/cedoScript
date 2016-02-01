@@ -1,11 +1,12 @@
-#±¾µØ¿ª·¢»·¾³ÉèÖÃ
-ËùÓĞ»·¾³µÄ×ÊÔ´Â·¾¶Ä¬ÈÏÂ·¾¶Îª C:\devenv 
+#æœ¬åœ°å¼€å‘ç¯å¢ƒè®¾ç½®
+æ‰€æœ‰ç¯å¢ƒçš„èµ„æºè·¯å¾„é»˜è®¤è·¯å¾„ä¸º C:\devenv 
 
+first, get devenv.zip
 
-- copySSHkey.bat ¿½±´sshkey
+- copySSHkey.bat æ‹·è´sshkey
 
-- javaEnvSet.bat ÉèÖÃJAVA_HOME
-- mavenEnvSet.bat Ìí¼ÓMavenµ½%PATH%
+- javaEnvSet.bat è®¾ç½®JAVA_HOME
+- mavenEnvSet.bat æ·»åŠ Mavenåˆ°%PATH%
 
-- install.cmd ÔËĞĞÆğµã
-- installFile.ps1 ÏÂÔØÖ¸¶¨ÎÄ¼ş:7-Zip
+- install.cmd è¿è¡Œèµ·ç‚¹
+- installFile.ps1 ä¸‹è½½æŒ‡å®šæ–‡ä»¶:7-Zip
