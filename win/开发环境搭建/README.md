@@ -8,5 +8,5 @@ first, get devenv.zip
 - javaEnvSet.bat 设置JAVA环境变量等
 - mavenEnvSet.bat 添加Maven到%PATH%
 
-- install.cmd 运行起点
+- start.cmd 开始搭建
 - installFile.ps1 下载指定文件:7-Zip
