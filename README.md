@@ -1,3 +1,7 @@
 # cedoScript
-
-常用脚本
+自用脚本
+##包括
+-  windows
+-  python
+-  docker
+-  linux
